@@ -158,6 +158,24 @@
       "alter_ego": "Norrin Radd",
       "first_appearance": "The Fantastic Four #48",
       "characters": "Norrin Radd"
+    },
+    {
+      "id": "ru4HC48",
+      "superhero": "Antonio",
+      "publisher": "DC Comics",
+      "alter_ego": "SuperLopez",
+      "first_appearance": "Madrid 2021",
+      "characters": "Manolo",
+      "alt_img": "https://i.pinimg.com/474x/3f/11/c6/3f11c6e2b6fd09c03c60043f433d427c.jpg"
+    },
+    {
+      "id": "YIhwS1-",
+      "superhero": "Antonio",
+      "publisher": "DC Comics",
+      "alter_ego": "SuperLopez",
+      "first_appearance": "Madrid 2021",
+      "characters": "Manolo",
+      "alt_img": "https://cdn.sincroguia.tv/uploads/programs/a/q/u/aquaman-poster-640812_SPA-97_V.jpg"
     }
   ]
 }
