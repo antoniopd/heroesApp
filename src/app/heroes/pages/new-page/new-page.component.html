@@ -81,9 +81,11 @@
 
         <div class="flex justify-content-between">
           <button mat-flat-button
+            *ngIf="currentHero.id"
             color="warn">
             Borrar
           </button>
+          <span></span>
 
           <button mat-flat-button
             color="primary"
