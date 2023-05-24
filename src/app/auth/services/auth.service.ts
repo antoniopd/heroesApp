@@ -1,8 +1,10 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { environments } from 'src/environments/environments';
-import { User } from '../interfaces/user.interfaces';
-import { Observable, of, tap, map, catchError } from 'rxjs';
+
+import { Observable, tap, of, map, catchError } from 'rxjs';
+
+import { environments } from '../../../environments/environments';
+import { User } from '../interfaces/user.interface';
 
 @Injectable({providedIn: 'root'})
 export class AuthService {
@@ -12,17 +14,17 @@ export class AuthService {
 
   constructor(private http: HttpClient) { }
 
-  get currentUser(): User | undefined {
+  get currentUser():User|undefined {
     if ( !this.user ) return undefined;
     return structuredClone( this.user );
   }
 
-  login( user: string, password: string ):Observable<User> {
-    // http.post('login', { email, password });
+  login( email: string, password: string ):Observable<User> {
+    // http.post('login',{ email, password });
     return this.http.get<User>(`${ this.baseUrl }/users/1`)
       .pipe(
         tap( user => this.user = user ),
-        tap( user => localStorage.setItem('token', 'fsdafsadf.sadfsadfs.asdfsdf' )),
+        tap( user => localStorage.setItem('token', 'aASDgjhasda.asdasd.aadsf123k' )),
       );
   }
 
@@ -36,17 +38,17 @@ export class AuthService {
       .pipe(
         tap( user => this.user = user ),
         map( user => !!user ),
-        catchError( error => of(false) )
-      )
+        catchError( err => of(false) )
+      );
 
   }
-
 
 
   logout() {
     this.user = undefined;
     localStorage.clear();
   }
+
 
 
 }

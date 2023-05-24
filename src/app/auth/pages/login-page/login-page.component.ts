@@ -11,13 +11,13 @@ import { Router } from '@angular/router';
 export class LoginPageComponent {
 
   constructor(
-      private authService: AuthService,
-      private router: Router,
-      ) { }
+    private authService: AuthService,
+    private router: Router
+  ){}
 
-  onLogin():void {
+  onLogin(): void {
 
-    this.authService.login( 'manolo@gmail.com', '123456' )
+    this.authService.login('fernando@gmail.com','123456')
       .subscribe( user => {
 
         this.router.navigate(['/']);
